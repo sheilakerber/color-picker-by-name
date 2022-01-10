@@ -4,11 +4,16 @@ import { Square } from "./components/Square";
 
 function App() {
   const [colorValue, setColorValue] = useState("");
+  const [hexValue, setHexValue] = useState("");
 
   return (
     <div className="App">
-      <Square colorValue={colorValue} />
-      <Input colorValue={colorValue} setColorValue={setColorValue} />
+      <Square colorValue={colorValue} hexValue={hexValue} />
+      <Input
+        colorValue={colorValue}
+        setColorValue={setColorValue}
+        setHexValue={setHexValue}
+      />
     </div>
   );
 }
